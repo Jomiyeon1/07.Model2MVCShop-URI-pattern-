@@ -57,7 +57,7 @@ public class ProductController {
 		// Business Logic
 		productservice.addProduct(product);
 
-		return "forward:/product/getProduct.jsp";
+		return "forward:/product/addview.jsp";
 
 	}
 
@@ -89,7 +89,7 @@ public class ProductController {
 		return "forward:/product/updateProduct.jsp";
 	}
 
-	
+	/////////////////¼öÁ¤ Áß /////////////////////////////////
 	//@RequestMapping("/updateProduct.do")
 	//public String updateProduct(@ModelAttribute("product") Product product, Model model) throws Exception {
 	@RequestMapping(value = "updateProduct", method = RequestMethod.POST)
@@ -98,7 +98,7 @@ public class ProductController {
 
 		productservice.updateProduct(product);
 
-		return "forward:/product/getProduct?prodNo=" + product.getProdNo();
+		return "redirect:/product/getProduct?prodNo="+product.getProdNo();
 	}
 
 	/////////////
