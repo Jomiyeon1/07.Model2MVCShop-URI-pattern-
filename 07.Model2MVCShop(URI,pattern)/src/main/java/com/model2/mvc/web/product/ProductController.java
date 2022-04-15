@@ -46,7 +46,7 @@ public class ProductController {
 
 		System.out.println("/product/addProduct : GET");
 
-		return "redirect:/product/addView.jsp";
+		return "redirect:/product/addProductView";
 	}
 
 	// @RequestMapping("/addProduct.do")
@@ -57,7 +57,7 @@ public class ProductController {
 		// Business Logic
 		productservice.addProduct(product);
 
-		return "forward:/product/addview.jsp";
+		return "forward:/product/addView.jsp";
 
 	}
 
@@ -97,7 +97,8 @@ public class ProductController {
 		System.out.println("/product/updateProduct : POST");
 
 		productservice.updateProduct(product);
-
+		
+		
 		return "redirect:/product/getProduct?prodNo="+product.getProdNo();
 	}
 
