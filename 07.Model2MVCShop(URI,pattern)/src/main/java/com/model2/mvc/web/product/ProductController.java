@@ -20,7 +20,7 @@ import com.model2.mvc.common.Search;
 import com.model2.mvc.service.domain.Product;
 import com.model2.mvc.service.product.ProductService;
 
-//==> »óÇ°°ü¸® Controller
+//==> Â»Ã³Ã‡Â°Â°Ã¼Â¸Â® Controller
 @Controller
 @RequestMapping("/product/*")
 public class ProductController {
